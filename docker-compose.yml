@@ -1,0 +1,14 @@
+version: "3"
+services:
+  doseextra-database:
+    image: mariadb:10.3
+    container_name: doseextra-database
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "doseextra"
+      MYSQL_USER: "doseextra"
+      MYSQL_PASSWORD: "password"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/volumes/data/doseextra-database:/var/lib/mysql

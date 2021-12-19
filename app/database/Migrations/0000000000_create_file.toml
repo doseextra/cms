@@ -1,0 +1,31 @@
+action = 'create'
+table_name = 'files'
+[create]
+[create.id]
+primary_key = "True"
+type = "Integer"
+
+[create.doc_type]
+type = "String"
+
+[create.path]
+type = "String"
+
+[create.name]
+type = "String"
+
+[create.month]
+type = "String"
+
+[create.year]
+type = "String"
+
+[create.created_at]
+default = "datetime.utcnow"
+nullable = "False"
+type = "TIMESTAMP"
+
+[create.updated_at]
+nullable = "False"
+onupdate = "datetime.utcnow"
+type = "TIMESTAMP"
